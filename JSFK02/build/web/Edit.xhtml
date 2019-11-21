@@ -1,0 +1,58 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:h="http://xmlns.jcp.org/jsf/html">
+    <h:head>
+        <title>JSF RSBK</title>
+
+        <style>
+             h2{
+                font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+                color: #F1F2F5;
+            }
+            
+            body {
+                background-color: #282828;
+            }
+            
+            td{
+                font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+                color: #F1F2F5;
+            }
+        </style>
+    </h:head>
+    <h:body>
+
+        <center>
+            <h2>Edit Data Mahasiswa</h2>
+            <h:form style="display:flex;justify-content:center;flex-direction: column;align-items: center;">
+                <h2 for="nama" style="margin-bottom:5px">NIM</h2>
+                <h:inputText value="#{EditMahasiswa.NIM}" style="border: 1px solid; border-radius: 25px; width: 50%; height: 5px; padding: 20px;" ></h:inputText>
+                <h2 for="nama" style="margin-bottom:5px">NAMA</h2>
+                <h:inputText value="#{EditMahasiswa.NAMA}" style="border: 1px solid; border-radius: 25px; width: 50%; height: 5px; padding: 20px;" ></h:inputText>
+                <h2 for="nama" style="margin-bottom:5px">Penjurusan</h2>
+                <h:inputText value="#{EditMahasiswa.PENJURUSAN}" style="border: 1px solid; border-radius: 25px; width: 50%; height: 5px; padding: 20px;" ></h:inputText>
+                <span style="color:white">${show}</span>
+                <br></br>
+                <table>
+                    <tr>
+                        <td>1 - Software</td>
+                        <td>2 - Jaringan</td>
+                    </tr>
+                    <tr>
+                        <td>3 - Embedded</td>
+                        <td>4 - Multimedia</td>
+                    </tr>
+                </table>
+                <br></br>
+                <table>
+                    <tr>
+                        <td><h:commandButton action="#{EditMahasiswa.Update_Mahasiswa}" value="Tambahkan" style="border: 1px solid; background-color: #FF6600; border-radius: 25px; width: 100px; height: 35px; font-family: Arial, Helvetica, sans-serif; color: black;"><f:param name="Update_NIM" value="#{EditMahasiswa.NIM}" /></h:commandButton></td>
+                        <td><h:commandButton action="index.xhtml" value="Kembali" style="border: 1px solid; background-color: #FF6600; border-radius: 25px; width: 100px; height: 35px; font-family: Arial, Helvetica, sans-serif; color: black;"></h:commandButton></td>
+                    </tr>
+                </table>
+            </h:form>
+        </center>
+    </h:body>
+</html>

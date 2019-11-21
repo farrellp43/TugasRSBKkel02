@@ -1,0 +1,31 @@
+<h:form>
+                <table>
+                    <tr>
+                        <td>NIM :</td>
+                        <td><h:inputText value="#{Mahasiswa.NIM}" ></h:inputText></td>
+                    </tr>
+                    <tr>
+                        <td>Nama Mahasiswa :</td>
+                        <td><h:inputText value="#{Mahasiswa.NAMA}" ></h:inputText></td>
+                    </tr>
+                    <tr>
+                        <td>Penjurusan :</td>
+                        <td><h:inputText value="#{Mahasiswa.PENJURUSAN}"></h:inputText></td>
+                    </tr>  
+                    <tr>
+                        <td>1 - Software</td>
+                        <td>2 - Jaringan</td>
+                    </tr>
+                    <tr>
+                        <td>3 - Embedded</td>
+                        <td>4 - Multimedia</td>
+                    </tr>
+                </table>
+                <br></br>
+                <h:commandButton value="Tambahkan" action="#{Mahasiswa.Tambah_Mahasiswa}"></h:commandButton>
+                <br></br>
+                <br></br>
+            </h:form>
+            <h:form>
+                <h:commandButton value="Kembali" action="index.xhtml"></h:commandButton>
+            </h:form>
